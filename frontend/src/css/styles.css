@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat';    
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #621132;
+    padding: 8px 20px;
+}
+
+.header-bar .logo {
+    width: 100px;
+    margin-left: 30px;
+}
+
+.searchBar{
+    margin-left: 15px;
+    margin-right: 30px;
+}
+
+.header-bar .header-links {
+    display: flex;
+    align-items: center;
+}
+
+.header-bar .header-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* Barra de navegación */
+.logoimss{
+    max-width: 2.5%;
+    max-height: 2.5%;
+    margin-left: 50px;
+}
+
+.navbar {
+    background-color: #13322b;
+    padding: 10px 0;
+    display: flex;
+}
+.liClass{
+    margin-top: 10px;
+    margin-left: 570px;
+}
+
+.navbarBelow {
+    background-color: #285C4D;
+    padding: 5px 0;
+}
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sección Hero */
+.hero {
+    justify-content: left;
+    padding: 80px 20px;
+    background-image: url('../../assets/imagenFondo.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    height: 40vh; /* Ocupa toda la altura de la pantalla */
+    position: relative;
+}
+
+.hero .hero-text {
+    max-width: 50%;
+    position: relative; 
+    z-index: 1;
+}
+
+.hero .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero .hero-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Sección de Registro */
+.registroContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f2f2f2; /* Fondo general */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la sección de registro */
+.registro {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 50%; /* Ancho ajustado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.registro h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #285C4D; /* Color del título */
+}
+
+.registro hr {
+    border: none;
+    height: 2px;
+    background-color: #285C4D;
+    margin: 10px 0;
+}
+
+.registro .nota {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.registro form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registro form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #285C4D;
+}
+
+.registro form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.registro form button {
+    padding: 10px 15px;
+    background-color: #285C4D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.registro form button:hover {
+    background-color: #13322b;
+}
+
+.registro a {
+    color: #13322b;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.registro a:hover {
+    text-decoration: underline;
+}
+
+/* Imagen y botón de ayuda */
+.RegisterImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%; /* Ajuste del ancho */
+    position: relative;
+}
+
+.backgroundRegistro {
+    width: 100%; /* Escalar imagen de fondo */
+    max-width: 150px; /* Tamaño máximo */
+    margin-bottom: 20px; /* Separación del botón */
+}
+
+.btn-help {
+    display: block;
+    background-color: #285C4D;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-help:hover {
+    background-color: #13322b;
+}
+
+
+/* Footer */
+/* Estilo general del footer */
+.footer {
+    background-color: #13322b;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Columnas responsivas */
+.footer-column {
+    flex: 1 1 22%; /* Base 22% con espacio entre columnas */
+    margin: 10px;
+    min-width: 200px; /* Asegura que se ajuste a pantallas pequeñas */
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del logo */
+.footer .logo_footer {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Enlaces */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Pleca inferior */
+.footer-pleca {
+    background-color: #285C4D;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.footer-pleca p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}

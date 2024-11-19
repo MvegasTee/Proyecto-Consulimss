@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConsulIMSS</title>
-    <link rel="stylesheet" href="./css/styles.css"> 
+    <title>ConsulImss</title>
+    <link href="./src/css/styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 <body>
 
   <header>
         <div class="header-bar">
-            <img src="ImagenLogo.png" alt="Gobierno de México" class="logo">
+            <img src="./assets/logo_blanco.svg" class="logo">
             <div class="header-links">
-                <a href="#">Trámites</a>
-                <a href="#">Gobierno</a>
-                <input type="search" placeholder="Buscar">
+                <a href="https://www.gob.mx/tramites">Trámites</a>
+                <a href="https://www.gob.mx/gobierno">Gobierno</a>
+                <img src="./assets/" class="searchBar"></img>
             </div>
         </div>
         <nav class="navbar">
-            <ul>
+            <img src="./assets/logoImss.png" class="logoimss">
+            <ul class="liClass">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Conoce al IMSS</a></li>
                 <li><a href="#">IMSS Transparente</a></li>
@@ -27,69 +29,103 @@
                 <li><a href="#">Transparencia</a></li>
             </ul>
         </nav>
+        <nav class="navbarBelow"></nav>
     </header>
-
-    <!-- Sección principal -->
-    <main>
-        <div class="hero">
-            <div class="hero-text">
-                <h1>La base de datos médica más grande del país,</h1>
-                <h2>CONOCE <span>CONSULIMSS</span></h2>
-                <p>Citas, diagnósticos, recetas, inventarios todo en un solo lugar</p>
-                <a href="#" class="btn-primary">Muy Pronto</a>
+    <body> 
+        <main>
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Inventario,recetas y gestion citas todo en un solo lugar</h2>
+                    <h1>La base de datos médica más grande del país</h1>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="laboratory.jpg" alt="Laboratorio">
+
+            <div class="registroContainer">
+                <!-- Sección de registro -->
+                <section class="registro">
+                    <h2>REGISTRO</h2>
+                    <hr />
+                    <p class="nota">Nota: El portal solo está disponible para administradores y prestadores de servicios del IMSS; Si usted es beneficiari@ o paciente debe saber que su portal aún no se encuentra disponible.</p>
+                    <form id="loginForm">
+                        <label for="username">Usuario:</label>
+                        <input type="text" id="username" placeholder="Ingrese su usuario" required />
+                
+                        <label for="password">Clave de acceso:</label>
+                        <input type="password" id="password" placeholder="Ingrese su clave de acceso" required />
+                
+                        <button type="submit">Comprobar Credenciales</button>
+                        <a href="#">Soy Proveedor o dependencia ajena al IMSS</a>
+                    </form>
+                </section>
+            
+                <!-- Imagen y botón de ayuda -->
+                <div class="RegisterImage">
+                    <img src="./assets/IMSS_LogoVerde.png" alt="Logotipo IMSS" class="backgroundRegistro" />
+                    <a href="#" class="btn-help">Ayuda</a>
+                </div>
             </div>
-        </div>
-
-        <!-- Sección de registro -->
-        <section class="registro">
-            <h2>REGISTRO</h2>
-            <p class="nota">Nota: El portal solo está disponible para administradores y prestadores de servicios del IMSS; Si usted es beneficiari@ o paciente debe saber que su portal aún no se encuentra disponible.</p>
-            <form>
-                <label for="username">Usuario:</label>
-                <input type="text" id="username" placeholder="Ingrese su usuario" required>
-
-                <label for="password">Clave de acceso:</label>
-                <input type="password" id="password" placeholder="Ingrese su clave de acceso" required>
-
-                <button type="submit">Comprobar Credenciales</button>
-                <a href="#">Soy Proveedor o dependencia ajena al IMSS</a>
-            </form>
-            <a href="#" class="btn-help">Ayuda</a>
-        </section>
-    </main>
-
+        </main>
+        <script src="./src/js/main.js"></script>
+    </body>
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="links">
-                <h3>Enlaces</h3>
-                <ul>
-                    <li><a href="#">Participa</a></li>
-                    <li><a href="#">Publicaciones Oficiales</a></li>
-                    <li><a href="#">Marco Jurídico</a></li>
-                    <li><a href="#">Plataforma Nacional de Transparencia</a></li>
-                    <li><a href="#">Alerta</a></li>
-                    <li><a href="#">Denuncia</a></li>
-                </ul>
-            </div>
-            <div class="info">
-                <h3>¿Qué es gob.mx?</h3>
-                <ul>
-                    <li><a href="#">Portal único de trámites</a></li>
-                    <li><a href="#">Datos abiertos</a></li>
-                    <li><a href="#">Declaración de accesibilidad</a></li>
-                    <li><a href="#">Políticas de privacidad</a></li>
-                </ul>
-            </div>
-            <div class="social">
-                <h3>Síguenos en</h3>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
+    <footer class="footer">
+        <div class="list-info">
+            <div class="footer-container">
+                <!-- Logo -->
+                <div class="footer-column">
+                    <a href="/">
+                        <img src="https://framework-gb.cdn.gob.mx/gobmx/img/logo_blanco.svg" alt="Logo Gobierno de México" class="logo_footer">
+                    </a>
+                </div>
+                <!-- Enlaces -->
+                <div class="footer-column">
+                    <h5>Enlaces</h5>
+                    <ul>
+                        <li><a href="https://participa.gob.mx" target="_blank" rel="noopener">Participa</a></li>
+                        <li><a href="https://www.gob.mx/publicaciones" target="_blank" rel="noopener">Publicaciones Oficiales</a></li>
+                        <li><a href="http://www.ordenjuridico.gob.mx" target="_blank" rel="noopener">Marco Jurídico</a></li>
+                        <li><a href="https://consultapublicamx.inai.org.mx/vut-web/" target="_blank" rel="noopener">Plataforma Nacional de Transparencia</a></li>
+                        <li><a href="https://alertadores.funcionpublica.gob.mx/" target="_blank" rel="noopener">Alerta</a></li>
+                        <li><a href="https://sidec.funcionpublica.gob.mx" target="_blank" rel="noopener">Denuncia</a></li>
+                    </ul>
+                </div>
+                <!-- Información -->
+                <div class="footer-column">
+                    <h5>¿Qué es gob.mx?</h5>
+                    <p>Es el portal único de trámites, información y participación ciudadana. <a href="https://www.gob.mx/que-es-gobmx" target="_blank">Leer más</a></p>
+                    <ul>
+                        <li><a href="https://datos.gob.mx">Portal de datos abiertos</a></li>
+                        <li><a href="https://www.gob.mx/accesibilidad">Declaración de accesibilidad</a></li>
+                        <li><a href="https://www.gob.mx/privacidadintegral">Aviso de privacidad integral</a></li>
+                        <li><a href="https://www.gob.mx/privacidadsimplificado">Aviso de privacidad simplificado</a></li>
+                        <li><a href="https://www.gob.mx/terminos">Términos y Condiciones</a></li>
+                        <li><a href="https://www.gob.mx/terminos#medidas-seguridad-informacion">Política de seguridad</a></li>
+                        <li><a href="https://www.gob.mx/sitemap">Mapa de sitio</a></li>
+                    </ul>
+                </div>
+                <!-- Redes sociales -->
+                <div class="footer-column">
+                    <h5><a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54" target="_blank">Denuncia contra servidores públicos</a></h5>
+                    <h5>Síguenos en</h5>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="https://www.facebook.com/gobmexico" target="_blank" rel="noopener" aria-label="Facebook de presidencia">
+                                <img src="facebook_icon.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/GobiernoMX" target="_blank" rel="noopener" aria-label="Twitter de presidencia">
+                                <img src="twitter_icon.svg" alt="Twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-pleca">
+            <p>&copy; 2024 Gobierno de México. Todos los derechos reservados.</p>
+        </div>
+    </footer>    
+    
 </body>
 </html>

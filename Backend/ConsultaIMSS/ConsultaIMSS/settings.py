@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,10 +28,21 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# settings.py
+
+# Usa cookies seguras para las sesiones en producción
+SESSION_COOKIE_SECURE = True  # Asegúrate de que esto esté configurado correctamente
+
+# Configura el backend de sesión
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Esto usa la base de datos para almacenar sesiones
+
+# Redirección después de iniciar sesión
+LOGIN_REDIRECT_URL = '/'  # Cambia la URL según a dónde quieras redirigir después de iniciar sesión
 
 # Application definition
 
 INSTALLED_APPS = [
+    'imss_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -75,8 +88,12 @@ WSGI_APPLICATION = 'ConsultaIMSS.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Equipo_Medico',  
+        'USER': 'postgres',      
+        'PASSWORD': 'LOZANOreyes2018',   
+        'HOST': 'localhost',      
+        'PORT': '5432',     
     }
 }
 
@@ -99,6 +116,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

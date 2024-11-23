@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from imss_app import views  # Importa tus vistas desde la app correspondiente
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.dashboard_view, name='home'),  # Redirige la raíz a 'dashboard'
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('ingresar_datos/', views.ingresar_datos, name='ingresar_datos'),
 ]
+

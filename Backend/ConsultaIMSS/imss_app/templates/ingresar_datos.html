@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingreso de Datos</title>
+</head>
+<body>
+    <h1>Ingreso de Equipo</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'dashboard' %}">Regresar al Dashboard</a>
+</body>
+</html>

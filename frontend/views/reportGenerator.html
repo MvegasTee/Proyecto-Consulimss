@@ -3,55 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generar Reporte</title>
+    <title>Creacion De Reporte</title>
     <link rel="stylesheet" href="../src/css/reportGenerator.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="../src/js/reportGenerator.js" defer></script>
+    <link rel="icon" href="../assets/faviconV2.png" type="image/x-icon">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <img src="../assets/logoImss.png" class="logoimss">
-            <ul class="liClass">
-                <li><a href="../index.html">Iniciar Sesión</a></li>
-                <li><a href="./queryBar.html">Consulta de Equipo</a></li>
-                <li><a href="./queryHistory.html">Historial de Búsquedas</a></li>
-                <li><a href="./reportGenerator.html" class="active">Generar Reporte</a></li>
-            </ul>
-        </nav>
-        <nav class="navbarBelow"></nav>
-    </header>
 
-    <main class="contenedor">
+<header>
+    <nav class="navbar">
+        <img src="../assets/logoImss.png" alt="Logo IMSS" class="logoimss">
+        <ul class="navbar-menu">
+            <li><a href="../index.html">Iniciar Sesión</a></li>
+            <li><a href="./queryBar.html">Consulta de Equipo</a></li>
+            <li><a href="./queryHistory.html">Historial de Búsquedas</a></li>
+            <li><a href="./reportGenerator.html" class="active">Generar Reporte</a></li>
+        </ul>
+    </nav>
+    <nav class="navbarBelow"></nav>
+</header>
+
+<body>
+    <main class="main">
+        <div class="estadoUsuario">
+            <p>Nota: Usted está generando un archivo PDF como: <strong>Administrador1</strong></p>
+        </div>
+
         <h1>Generar Reporte</h1>
-        <p class="nota">Nota: Usted está generando un archivo PDF como <span id="usuario">Administrador1</span></p>
+        <hr>
+        </br>
+        <p>Completa y genera archivos PDF de las búsquedas realizadas.</p>
         
+        </br>
         <div class="form-contenedor">
             <!-- Formulario -->
-            <form id="reporte-form" method="POST">
-                <label for="template-name">1. Nombre del nuevo template</label>
-                <input type="text" id="template-name" name="template-name" placeholder="Nuevo Template" required>
-                <small>*Nombre de su nuevo template</small>
+            <form id="reporte-form">
+                <label for="template-name">1.Nombre del reporte</label>
+                <input type="text" id="template-name" name="template-name" placeholder="Ejemplo: Reporte Semestral" required>
+                <small>*Introduce un nombre descriptivo para el reporte.</small>
 
-                <label>2. Seleccione un template</label>
+                <label>2. Seleccione un tipo de reporte</label>
                 <div class="radio-group">
                     <label>
                         <input type="radio" name="template" value="invoice" checked>
-                        <span>Invoice</span>
+                        <span>Informe</span>
                     </label>
                     <label>
                         <input type="radio" name="template" value="pdf">
-                        <span>PDF Template</span>
+                        <span>Otro tipo</span>
                     </label>
                 </div>
 
+                <label for="custom-text">3. Descripción del reporte</label>
+                <textarea id="custom-text" name="custom-text" placeholder="Escribe aquí el contenido del reporte..." rows="6" required></textarea>
+
                 <div class="btn-group">
                     <button type="reset" class="btn-cancelar">Cancelar</button>
-                    <button type="submit" class="btn-generar">Generar Archivo</button>
+                    <button type="button" id="generate-pdf" class="btn-generar">Generar Archivo</button>
                 </div>
             </form>
 
-            <!-- Vista Previa del PDF -->
+            <!-- Vista previa del PDF -->
             <div class="preview">
                 <iframe id="pdf-preview" class="pdf-preview" src="about:blank"></iframe>
             </div>
@@ -60,7 +73,27 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <!-- Aquí se mantiene el contenido del footer sin cambios -->
+            <div class="footer-column">
+                <a href="/">
+                    <img src="https://framework-gb.cdn.gob.mx/gobmx/img/logo_blanco.svg" alt="Logo del Gobierno de México" class="logo_footer">
+                </a>
+            </div>
+            <div class="footer-column">
+                <h5>Enlaces</h5>
+                <ul>
+                    <li><a href="https://participa.gob.mx" target="_blank" rel="noopener">Participa</a></li>
+                    <li><a href="https://www.gob.mx/publicaciones" target="_blank" rel="noopener">Publicaciones Oficiales</a></li>
+                    <li><a href="http://www.ordenjuridico.gob.mx" target="_blank" rel="noopener">Marco Jurídico</a></li>
+                    <li><a href="https://consultapublicamx.inai.org.mx/vut-web/" target="_blank" rel="noopener">Plataforma Nacional de Transparencia</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h5>¿Qué es gob.mx?</h5>
+                <p>Portal único de trámites. <a href="https://www.gob.mx/que-es-gobmx" target="_blank">Leer más</a></p>
+            </div>
+        </div>
+        <div class="footer-pleca">
+            <p>&copy; 2024 Gobierno de México. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>

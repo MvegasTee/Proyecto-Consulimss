@@ -25,6 +25,14 @@ body {
 }
 
 /* Main Content */
+
+main {
+    padding: 10px 20px;
+    padding-bottom: 0px;
+    margin: 2rem auto;
+    max-width: 1300px;
+}
+
 .departamentos {
     height: 70vh;
     text-align: left;
@@ -51,16 +59,23 @@ body {
 .btn {
     background-color: #204e43;
     color: white;
-    font-size: 1rem;
+    font-size: .9rem;
     border: none;
     border-radius: 5px;
     padding: 1rem;
     cursor: pointer;
     text-align: left;
+    font-family: 'Montserrat';  
+    text-decoration: none; 
 }
 
 .btn:hover {
     background-color: #2e8a79;
+}
+
+.btn a:visited {
+    color: white; 
+    text-decoration: none;
 }
 
 /* Footer */

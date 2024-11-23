@@ -13,6 +13,14 @@ header {
     color: white;
 }
 
+main {
+    padding: 10px 20px;
+    height: 95vh;
+    text-align: left;
+    margin: 2rem auto;
+    max-width: 1300px;
+}
+
 /* Barra de navegación */
 .logoimss{
     max-width: 2.5%;
@@ -69,6 +77,14 @@ header {
 }
 
 /* Instrucciones */
+.estadoUsuario {
+    font-size: 14px;
+    background-color: #fff8dc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ffc107;
+}
+
 .instrucciones {
     text-align: left;
     font-size: 16px;

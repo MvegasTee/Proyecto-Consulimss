@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../src/css/queryHistory.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="../src/js/queryHistory.js" defer></script>
+    <link rel="icon" href="../assets/faviconV2.png" type="image/x-icon">
+
 </head>
 <body>
     <header>
@@ -22,7 +24,11 @@
         <nav class="navbarBelow"></nav>
     </header>
 
-    <main>
+    <main class="main">
+        <div class="estadoUsuario">
+            <p>Consultando registros como: <strong>Administrador1</strong></p>
+        </div>
+
         <section class="historial">
             <h1 class="titulo-historial">Historial de Consultas</h1>
             <hr />
@@ -63,9 +69,9 @@
                 <button type="submit" class="btn filtro">Filtrar</button>
             </form>
 
-            <div class="status-bar">
+            <!-- <div class="status-bar">
                 <span id="status-text" class="status-text">STATUS: Se han encontrado 431 consultas de forma exitosa!</span>
-            </div>
+            </div> -->
 
             <!-- Tabla -->
             <div class="tabla-contenedor">

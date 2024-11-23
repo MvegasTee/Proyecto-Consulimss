@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Búsquedas</title>
+    <link rel="stylesheet" href="../src/css/queryHistory.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="../src/js/queryHistory.js" defer></script>
+    <link rel="icon" href="../assets/faviconV2.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../assets/logoImss.png" alt="Logo IMSS" class="logoimss">
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Iniciar Sesión</a></li>
+                <li><a href="./queryBar.html">Consulta de Equipo</a></li>
+                <li><a href="./queryHistory.html" class="active">Historial de Búsquedas</a></li>
+                <li><a href="./reportGenerator.html">Generar Reporte</a></li>
+            </ul>
+        </nav>
+        <nav class="navbarBelow"></nav>
+    </header>
+
+    <main class="main">
+        <div class="estadoUsuario">
+            <p>Consultando registros como: <strong>Administrador1</strong></p>
+        </div>
+
+        <section class="historial">
+            <h1 class="titulo-historial">Historial de Consultas</h1>
+            <hr />
+
+            <p class="instrucciones">Ajusta las etiquetas para filtrar el historial de búsquedas realizadas en la base de datos.</p>
+
+            <!-- Filtros -->
+            <form id="filter-form" class="filtros">
+                <div class="dropdown">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" class="dropdown-select">
+                        <option value="todos">Todos</option>
+                        <option value="exito">Éxito</option>
+                        <option value="advertencia">Advertencia</option>
+                        <option value="error">Error</option>
+                    </select>
+                </div>
+
+                <div class="dropdown">
+                    <label for="usuario">Usuario:</label>
+                    <select id="usuario" name="usuario" class="dropdown-select">
+                        <option value="todos">Todos</option>
+                        <option value="admin">Admin</option>
+                        <option value="usuario">Usuario</option>
+                    </select>
+                </div>
+
+                <div class="dropdown">
+                    <label for="tiempo">Rango de Tiempo:</label>
+                    <select id="tiempo" name="tiempo" class="dropdown-select">
+                        <option value="14dias">Últimos 14 días</option>
+                        <option value="7dias">Últimos 7 días</option>
+                        <option value="24horas">Últimas 24 horas</option>
+                        <option value="personalizado">Personalizado</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn filtro">Filtrar</button>
+            </form>
+
+            <!-- <div class="status-bar">
+                <span id="status-text" class="status-text">STATUS: Se han encontrado 431 consultas de forma exitosa!</span>
+            </div> -->
+
+            <!-- Tabla -->
+            <div class="tabla-contenedor">
+                <table class="tabla-consultas">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Consulta Realizada</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-cuerpo">
+                        <!-- Los datos se cargarán dinámicamente desde el backend -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="list-info">
+            <div class="footer-container">
+                <!-- Logo -->
+                <div class="footer-column">
+                    <a href="/">
+                        <img src="https://framework-gb.cdn.gob.mx/gobmx/img/logo_blanco.svg" alt="Logo Gobierno de México" class="logo_footer">
+                    </a>
+                </div>
+                <!-- Enlaces -->
+                <div class="footer-column">
+                    <h5>Enlaces</h5>
+                    <ul>
+                        <li><a href="https://participa.gob.mx" target="_blank" rel="noopener">Participa</a></li>
+                        <li><a href="https://www.gob.mx/publicaciones" target="_blank" rel="noopener">Publicaciones Oficiales</a></li>
+                        <li><a href="http://www.ordenjuridico.gob.mx" target="_blank" rel="noopener">Marco Jurídico</a></li>
+                        <li><a href="https://consultapublicamx.inai.org.mx/vut-web/" target="_blank" rel="noopener">Plataforma Nacional de Transparencia</a></li>
+                        <li><a href="https://alertadores.funcionpublica.gob.mx/" target="_blank" rel="noopener">Alerta</a></li>
+                        <li><a href="https://sidec.funcionpublica.gob.mx" target="_blank" rel="noopener">Denuncia</a></li>
+                    </ul>
+                </div>
+                <!-- Información -->
+                <div class="footer-column">
+                    <h5>¿Qué es gob.mx?</h5>
+                    <p>Es el portal único de trámites, información y participación ciudadana. <a href="https://www.gob.mx/que-es-gobmx" target="_blank">Leer más</a></p>
+                    <ul>
+                        <li><a href="https://datos.gob.mx">Portal de datos abiertos</a></li>
+                        <li><a href="https://www.gob.mx/accesibilidad">Declaración de accesibilidad</a></li>
+                        <li><a href="https://www.gob.mx/privacidadintegral">Aviso de privacidad integral</a></li>
+                        <li><a href="https://www.gob.mx/privacidadsimplificado">Aviso de privacidad simplificado</a></li>
+                        <li><a href="https://www.gob.mx/terminos">Términos y Condiciones</a></li>
+                        <li><a href="https://www.gob.mx/terminos#medidas-seguridad-informacion">Política de seguridad</a></li>
+                        <li><a href="https://www.gob.mx/sitemap">Mapa de sitio</a></li>
+                    </ul>
+                </div>
+                <!-- Redes sociales -->
+                <div class="footer-column">
+                    <h5><a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54" target="_blank">Denuncia contra servidores públicos</a></h5>
+                    <h5>Síguenos en</h5>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="https://www.facebook.com/gobmexico" target="_blank" rel="noopener" aria-label="Facebook de presidencia">
+                                <img src="facebook_icon.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/GobiernoMX" target="_blank" rel="noopener" aria-label="Twitter de presidencia">
+                                <img src="twitter_icon.svg" alt="Twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-pleca">
+            <p>&copy; 2024 Gobierno de México. Todos los derechos reservados.</p>
+        </div>
+    </footer>    
+    </div>
+</body>
+</html>

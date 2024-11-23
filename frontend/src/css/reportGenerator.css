@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+header {
+    background-color: #13322b;
+    color: white;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 10px 20px;
+    height: 95vh;
+    text-align: left;
+    margin: 2rem auto;
+    max-width: 1300px;
+}
+
+/* Barra de navegación */
+.logoimss{
+    max-width: 2.5%;
+    max-height: 2.5%;
+    margin-left: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+}
+
+.logoimss{
+    max-width: 2.5%;
+    max-height: 2.5%;
+    margin-left: 50px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-menu li {
+    list-style: none;
+}
+
+.navbarBelow {
+    background-color: #285C4D;
+    padding: 3px 0;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar-menu a.active,
+.navbar-menu a:hover {
+    background-color: #285C4D;
+}
+
+.titulo-historial {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.estadoUsuario {
+    background-color: #fff8dc;
+    padding: 10px;
+    border-left: 5px solid #ffc107;
+    margin-bottom: 20px;
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.form-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contenedor{
+    background-color: #f6f6f6;
+    padding: 30px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn-cancelar {
+    background-color: #ccc;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-generar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.preview {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.pdf-preview {
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+.footer {
+    background-color: #13322b;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Columnas responsivas */
+.footer-column {
+    flex: 1 1 22%; /* Base 22% con espacio entre columnas */
+    margin: 10px;
+    min-width: 200px; /* Asegura que se ajuste a pantallas pequeñas */
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del logo */
+.footer .logo_footer {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Enlaces */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Pleca inferior */
+.footer-pleca {
+    background-color: #285C4D;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.footer-pleca p {
+    margin: 0;
+    font-size: 0.8rem;}

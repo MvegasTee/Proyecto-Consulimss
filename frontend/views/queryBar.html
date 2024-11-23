@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de búsqueda especializada para equipos médicos del IMSS">
+    <title>Búsqueda Especializada</title>
+    <link rel="stylesheet" href="../src/css/queryBar.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script defer src="../src/js/queryRequests.js"></script>
+    <link rel="icon" href="../assets/faviconV2.png" type="image/x-icon">
+
+</head>
+
+<header>
+    <nav class="navbar">
+        <img src="../assets/logoImss.png" alt="Logo del IMSS" class="logoimss">
+        <ul class="navbar-menu">
+            <li><a href="../index.html">Iniciar Sesión</a></li>
+            <li><a href="./queryBar.html" class="active">Consulta de Equipo</a></li>
+            <li><a href="./queryHistory.html">Historial de Búsquedas</a></li>
+            <li><a href="./reportGenerator.html">Generar Reporte</a></li>
+        </ul>
+    </nav>
+    <div class="navbarBelow"></div>
+</header>
+
+<body>
+    <main class="main">
+        <div class="estadoUsuario">
+            <p>Realizando búsquedas como: <strong>Administrador1</strong></p>
+        </div>
+
+        <h2>Búsqueda Especializada: <span>General</span></h2>
+        <hr>
+        <p>Llena al menos un campo para realizar la búsqueda de equipos médicos existentes en las dependencias del IMSS.</p>
+        </br>
+        <section class="busqueda">
+            <form id="search-form" class="search-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Genérico:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre...">
+                    </div>
+                    <div class="form-group">
+                        <label for="id">ID del Equipo:</label>
+                        <input type="text" id="id" name="id" placeholder="Ingrese ID...">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="departamento">Departamento:</label>
+                        <input type="text" id="departamento" name="departamento" placeholder="Ingrese departamento...">
+                    </div>
+                    <div class="form-group">
+                        <label for="palabras-clave">Palabras Clave:</label>
+                        <input type="text" id="palabras-clave" name="palabras-clave" placeholder="Ingrese palabras clave...">
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn buscar">Realizar Búsqueda</button>
+                    <button type="reset" class="btn limpiar">Limpiar Campos</button>
+                </div>
+            </form>
+        </section>
+        </br>
+
+        <section id="resultados" class="resultados">
+            <aside class="lista-resultados">
+                <h3>Resultados</h3>
+                <ul id="result-list">
+                    <li>Ejemplo de resultado 1</li>
+                    <li>Ejemplo de resultado 2</li>
+                </ul>
+            </aside>
+
+            <div class="detalle-equipo">
+                <h1>[ Nombre del equipo ]</h1>
+                <h3>Detalles del Equipo</h3>
+                <img id="imagen-equipo" src="" alt="Imagen del equipo" class="imagen-equipo" style="display: none;">
+                <div>
+                    <label for="status">Status del Equipo:</label>
+                    <textarea id="status" readonly></textarea>
+                </div>
+                <div>
+                    <label for="accesorios">Accesorios:</label>
+                    <textarea id="accesorios" readonly></textarea>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="/">
+                    <img src="https://framework-gb.cdn.gob.mx/gobmx/img/logo_blanco.svg" alt="Logo del Gobierno de México" class="logo_footer">
+                </a>
+            </div>
+            <div class="footer-column">
+                <h5>Enlaces</h5>
+                <ul>
+                    <li><a href="https://participa.gob.mx" target="_blank" rel="noopener">Participa</a></li>
+                    <li><a href="https://www.gob.mx/publicaciones" target="_blank" rel="noopener">Publicaciones Oficiales</a></li>
+                    <li><a href="http://www.ordenjuridico.gob.mx" target="_blank" rel="noopener">Marco Jurídico</a></li>
+                    <li><a href="https://consultapublicamx.inai.org.mx/vut-web/" target="_blank" rel="noopener">Plataforma Nacional de Transparencia</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h5>¿Qué es gob.mx?</h5>
+                <p>Portal único de trámites. <a href="https://www.gob.mx/que-es-gobmx" target="_blank">Leer más</a></p>
+            </div>
+        </div>
+        <div class="footer-pleca">
+            <p>&copy; 2024 Gobierno de México. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat';  
+}
+/* Barra de navegación */
+.logoimss{
+    max-width: 2.5%;
+    max-height: 2.5%;
+    margin-left: 50px;
+}
+
+.navbar {
+    background-color: #13322b;
+    padding: 10px 0;
+    display: flex;
+}
+
+.navbarBelow {
+    background-color: #285C4D;
+    padding: 3px 0;
+}
+
+/* Main Content */
+.departamentos {
+    height: 70vh;
+    text-align: left;
+    margin: 2rem auto;
+    max-width: 1300px;
+}
+
+.user-info{ 
+    font-size: 14px;
+    background-color: #fff8dc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ffc107;
+}
+
+.grid {
+    font-family: 'Montserrat';  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    background-color: #204e43;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+.btn:hover {
+    background-color: #2e8a79;
+}
+
+/* Footer */
+.footer {
+    background-color: #13322b;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Columnas responsivas */
+.footer-column {
+    flex: 1 1 22%; /* Base 22% con espacio entre columnas */
+    margin: 10px;
+    min-width: 200px; /* Asegura que se ajuste a pantallas pequeñas */
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del logo */
+.footer .logo_footer {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Enlaces */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Pleca inferior */
+.footer-pleca {
+    background-color: #285C4D;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.footer-pleca p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}

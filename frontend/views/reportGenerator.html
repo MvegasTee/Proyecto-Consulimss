@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Reporte</title>
+    <link rel="stylesheet" href="../src/css/reportGenerator.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="../src/js/reportGenerator.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../assets/logoImss.png" class="logoimss">
+            <ul class="liClass">
+                <li><a href="../index.html">Iniciar Sesión</a></li>
+                <li><a href="./queryBar.html">Consulta de Equipo</a></li>
+                <li><a href="./queryHistory.html">Historial de Búsquedas</a></li>
+                <li><a href="./reportGenerator.html" class="active">Generar Reporte</a></li>
+            </ul>
+        </nav>
+        <nav class="navbarBelow"></nav>
+    </header>
+
+    <main class="contenedor">
+        <h1>Generar Reporte</h1>
+        <p class="nota">Nota: Usted está generando un archivo PDF como <span id="usuario">Administrador1</span></p>
+        
+        <div class="form-contenedor">
+            <!-- Formulario -->
+            <form id="reporte-form" method="POST">
+                <label for="template-name">1. Nombre del nuevo template</label>
+                <input type="text" id="template-name" name="template-name" placeholder="Nuevo Template" required>
+                <small>*Nombre de su nuevo template</small>
+
+                <label>2. Seleccione un template</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="template" value="invoice" checked>
+                        <span>Invoice</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="template" value="pdf">
+                        <span>PDF Template</span>
+                    </label>
+                </div>
+
+                <div class="btn-group">
+                    <button type="reset" class="btn-cancelar">Cancelar</button>
+                    <button type="submit" class="btn-generar">Generar Archivo</button>
+                </div>
+            </form>
+
+            <!-- Vista Previa del PDF -->
+            <div class="preview">
+                <iframe id="pdf-preview" class="pdf-preview" src="about:blank"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Aquí se mantiene el contenido del footer sin cambios -->
+        </div>
+    </footer>
+</body>
+</html>

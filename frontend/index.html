@@ -15,7 +15,7 @@
             <div class="header-links">
                 <a href="https://www.gob.mx/tramites">Trámites</a>
                 <a href="https://www.gob.mx/gobierno">Gobierno</a>
-                <img src="./assets/" class="searchBar"></img>
+                <img src="./assets/lupa.png" class="searchBar"></img>
             </div>
         </div>
         <nav class="navbar">
@@ -35,38 +35,43 @@
         <main>
             <div class="hero">
                 <div class="hero-text">
-                    <h2>Inventario,recetas y gestion citas todo en un solo lugar</h2>
-                    <h1>La base de datos médica más grande del país</h1>
+                    <h5>Inventarios, recetas y equipo medico, todo en un solo lugar</h5>
+                    <h2>CONOCE CONSULIMSS</h1>
                 </div>
             </div>
 
             <div class="registroContainer">
+                <h1 class="registroText">REGISTRO</h1>
+                <br>
+                <hr/>               
+                <br>
+                <p>Comienza llenando el siguiente formulario con tus credenciales de administrador o prestador de servicios en algun centro IMSS.</p>
+                <br>
+                <div class="formContainer"> 
                 <!-- Sección de registro -->
-                <section class="registro">
-                    <h2>REGISTRO</h2>
-                    <hr />
-                    <p class="nota">Nota: El portal solo está disponible para administradores y prestadores de servicios del IMSS; Si usted es beneficiari@ o paciente debe saber que su portal aún no se encuentra disponible.</p>
-                    <form id="loginForm">
-                        <label for="username">Usuario:</label>
-                        <input type="text" id="username" placeholder="Ingrese su usuario" required />
-                
-                        <label for="password">Clave de acceso:</label>
-                        <input type="password" id="password" placeholder="Ingrese su clave de acceso" required />
-                
-                        <button type="submit">Comprobar Credenciales</button>
-                        <a href="#">Soy Proveedor o dependencia ajena al IMSS</a>
-                    </form>
-                </section>
-            
-                <!-- Imagen y botón de ayuda -->
-                <div class="RegisterImage">
-                    <img src="./assets/IMSS_LogoVerde.png" alt="Logotipo IMSS" class="backgroundRegistro" />
-                    <a href="#" class="btn-help">Ayuda</a>
+                    <section class="registro">
+                        <p class="nota"><strong>Nota:</strong> El portal solo está disponible para prestadores de servicios del IMSS; Si usted es beneficiari@ o paciente no podra tener acceso a esta base de datos.</p>
+                        <form id="loginForm">
+                            <label for="username">Usuario:</label>
+                            <input type="text" id="username" required />
+                    
+                            <label for="password">Clave de acceso:</label>
+                            <input type="password" id="password" required />
+                    
+                            <button type="submit">Comprobar Credenciales</button>
+                            <a href="#">Soy Proveedor o dependencia ajena al IMSS</a>
+                        </form>
+                    </section>
+                    <div class="RegisterImage">
+                        <img src="./assets/IMSS_LogoVerde.png" alt="Logotipo IMSS" class="backgroundRegistro" />
+                    </div>
                 </div>
+                <a href="#" class="btn-help">Ayuda</a>
             </div>
         </main>
         <script src="./src/js/main.js"></script>
     </body>
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="list-info">

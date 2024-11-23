@@ -4,7 +4,8 @@
 }
 
 body {
-    font-family: 'Montserrat';    
+    font-family: 'Montserrat';  
+    height: 100%;  
 }
 
 .header-bar {
@@ -23,6 +24,7 @@ body {
 .searchBar{
     margin-left: 15px;
     margin-right: 30px;
+    width: 25px;
 }
 
 .header-bar .header-links {
@@ -83,41 +85,33 @@ body {
     background-image: url('../../assets/imagenFondo.jpg'); 
     background-size: cover; 
     background-position: center;
-    height: 40vh; /* Ocupa toda la altura de la pantalla */
-    position: relative;
-}
-
-.hero .hero-text {
-    max-width: 50%;
-    position: relative; 
-    z-index: 1;
-}
-
-.hero .hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    height: 10vh;
 }
 
 .hero .hero-text h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    height: 40vh;
+    font-weight: bold;    
+    padding-left: 50px;
+    color: #ffffff; 
+    margin-bottom: 10px; /* Ajusta el espacio desde el borde inferior de la imagen */
+    font-size: 4em; 
 }
 
-.hero .hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.hero .hero-text h5 {
+    padding-left: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.5em; 
 }
 
 /* Sección de Registro */
 .registroContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     background-color: #f2f2f2; /* Fondo general */
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    height: 80vh; 
+    box-shadow: 0 3px px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo de la sección de registro */
@@ -127,6 +121,10 @@ body {
     border-radius: 10px;
     width: 50%; /* Ancho ajustado */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer{
+    display: flex;
 }
 
 .registro h2 {
@@ -144,9 +142,9 @@ body {
 
 .registro .nota {
     font-size: 1rem;
-    color: #4b5563;
+    color: #4f4e40;
     margin-bottom: 20px;
-    background-color: #f9f9f9;
+    background-color: #fcffcb;
     padding: 10px;
     border-radius: 5px;
 }
@@ -199,36 +197,36 @@ body {
 /* Imagen y botón de ayuda */
 .RegisterImage {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%; /* Ajuste del ancho */
+    width: 45%;
+    opacity: 0.2;
     position: relative;
 }
 
 .backgroundRegistro {
-    width: 100%; /* Escalar imagen de fondo */
-    max-width: 150px; /* Tamaño máximo */
-    margin-bottom: 20px; /* Separación del botón */
+    width: 300%;
+    max-width: 400px;
 }
 
 .btn-help {
-    display: block;
-    background-color: #285C4D;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
+    position: fixed; /* Esto asegura que el botón esté siempre visible en la ventana */
+    background-color: #306d5f; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    text-decoration: none; /* Quita el subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    right: 20px; /* Distancia desde el borde derecho */
+    bottom: 20px; /* Distancia desde el borde inferior */
 }
 
 .btn-help:hover {
-    background-color: #13322b;
+    background-color: #46b394; /* Color de fondo al pasar el cursor */
 }
 
 
 /* Footer */
-/* Estilo general del footer */
 .footer {
     background-color: #13322b;
     color: #ffffff;
